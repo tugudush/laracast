@@ -22,8 +22,8 @@ class PageController extends Controller
     ]);
   } // End of public function tasks()
 
-  public function task($id) {
-    $task = Task::findOrFail($id);
+  public function task(Task $task) {
+    //$task = Task::findOrFail($id);
     return view('task', compact('task'));
   } // End of public function task($id)
 
