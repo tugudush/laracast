@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Task;
+use Faker\Factory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,10 +21,15 @@ class DatabaseSeeder extends Seeder
 class TaskTableSeeder extends seeder
 {
   public function run() {
+    $faker = Factory::create();
     Task::truncate();
-    Task::create([
-      'body' => 'Wash dishes.',
-      'completed' => 0
-    ]);
+
+    for ($i=1; $i<=10; $i++) {
+      Task::create([
+        'body' => $faker->realText(30),
+        'completed' => 0
+      ]);
+    } // End of for (i=1; i<=5; i++)
+    
   } // End of public function run()
 } // End of class TaskTableSeeder extends seeeder
