@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index');
+
+Route::get('/tasks', 'PageController@tasks');
+Route::get('/task/{id}', 'PageController@task');
