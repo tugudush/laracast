@@ -68,7 +68,7 @@
     <h2>Tasks List</h2>
     <ul>
       @foreach ($tasks as $task)
-        <li>{{ $task->body }}</li>
+        <li><a href="{{ URL::to('task/'.$task->id) }}">{{ $task->body }}</a></li>
       @endforeach
     </ul>
   </body>

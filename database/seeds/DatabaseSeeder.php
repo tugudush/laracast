@@ -24,10 +24,10 @@ class TaskTableSeeder extends seeder
     $faker = Factory::create();
     Task::truncate();
 
-    for ($i=1; $i<=10; $i++) {
+    for ($i=1; $i<=5; $i++) {
       Task::create([
         'body' => $faker->realText(30),
-        'completed' => 0
+        'completed' => false
       ]);
     } // End of for (i=1; i<=5; i++)
     
