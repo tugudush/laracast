@@ -14,4 +14,5 @@
 Route::get('/', 'PageController@index');
 
 Route::get('/tasks', 'PageController@tasks');
+//Route::get('/task/{id}', 'PageController@task');
 Route::get('/task/{task}', 'PageController@task');
