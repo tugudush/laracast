@@ -10,21 +10,21 @@ class PageController extends Controller
 {
 
   public function index() {
-    return view('welcome');
+    return view('pages.welcome');
   } // End of public function index()
 
   public function tasks() {    
     //$tasks = DB::table('tasks')->get();
     //$task = new Task;
     $tasks = Task::all();
-    return view('tasks', [
+    return view('pages.tasks', [
       'tasks' => $tasks
     ]);
   } // End of public function tasks()
 
   public function task(Task $task) {
     //$task = Task::findOrFail($id);
-    return view('task', compact('task'));
+    return view('pages.task', compact('task'));
   } // End of public function task($id)
 
 } // End of class PageController extends Controller
