@@ -1,0 +1,14 @@
+a, a:hover {
+  color: initial;
+}
+
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;  
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

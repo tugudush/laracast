@@ -1,0 +1,13 @@
+.clear {
+  clear: both;
+}
+
+.full-width-block {
+  display: block;
+  width: 100%;
+}
+
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+} 
