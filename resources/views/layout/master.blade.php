@@ -13,7 +13,11 @@
 
   <body id="{{ $body_id }}" class="{{ $body_class }}">
 
-    @yield('content')
+    @include('layout.nav')
+
+    <main role="main" class="container">
+      @yield('content')
+    </main>    
     
     @include('layout.footer-scripts')
     @yield('page-footer-scripts')

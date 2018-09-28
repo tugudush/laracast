@@ -1,75 +1,31 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.master')
 
-    <title>Laravel</title>
+@section('header-php')
+  <?php
+  $body_id = 'page-index';
+  $body_class = '';
+  ?>
+@endsection
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600" rel="stylesheet" type="text/css">
+@section('meta-dynamic')
+  <title>{{ isset($meta_title) ? $meta_title : 'Tasks | Laracast' }}</title>
+  <meta name="description" content="{{ isset($meta_description) ? $meta_description : 'Tasks' }}">
+  <meta name="keywords" content="{{ isset($meta_keywords) ? $meta_keywords : 'tasks' }}">
+@endsection
 
-    <!-- Styles -->
-    <style>
-      html, body {
-        background-color: #fff;
-        /* color: #636b6f; */
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400;
-        height: 100vh;
-        margin: 0;
-      }
+@section('content')
+  <h2>Tasks List</h2>
+  <ul>
+    @foreach ($tasks as $task)
+      <li><a href="{{ URL::to('task/'.$task->id) }}">{{ $task->body }}</a></li>
+    @endforeach
+  </ul>
+@endsection
 
-      .full-height {
-        height: 100vh;
-      }
+@section('page-footer-scripts')
 
-      .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      }
+@endsection
 
-      .position-ref {
-        position: relative;
-      }
 
-      .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-      }
+    
 
-      .content {
-        text-align: center;
-      }
-
-      .title {
-        font-size: 84px;
-      }
-
-      .links > a {
-        color: #636b6f;
-        padding: 0 25px;
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-
-      .m-b-md {
-        margin-bottom: 30px;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Tasks List</h2>
-    <ul>
-      @foreach ($tasks as $task)
-        <li><a href="{{ URL::to('task/'.$task->id) }}">{{ $task->body }}</a></li>
-      @endforeach
-    </ul>
-  </body>
-</html>
