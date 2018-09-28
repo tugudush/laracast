@@ -13,7 +13,7 @@
 
   <body id="{{ $body_id }}" class="{{ $body_class }}">
 
-    @yield('sections')
+    @yield('content')
     
     @include('layout.footer-scripts')
     @yield('page-footer-scripts')
