@@ -14,7 +14,7 @@
 Route::get('/', 'PageController@index');
 
 Route::get('/tasks', 'PageController@tasks');
-Route::get('/task/{task}', 'PageController@task');
+Route::get('/task/{task}', 'PageController@task')->where(['post' => '[0-9]+']);
 
 Route::get('/posts', 'PostController@list');
 Route::get('/post/{post}', 'PostController@view')->where(['post' => '[0-9]+']);
