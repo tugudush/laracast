@@ -2,6 +2,6 @@ main {
   padding-top: 100px;
 }
 
-ul {
-  list
+.dropdown-menu {
+  left: initial;  
 }

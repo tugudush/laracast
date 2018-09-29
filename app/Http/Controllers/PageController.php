@@ -13,17 +13,14 @@ class PageController extends Controller
     return view('pages.index');
   } // End of public function index()
 
-  public function tasks() {    
-    //$tasks = DB::table('tasks')->get();
-    //$task = new Task;
+  public function tasks() {
     $tasks = Task::all();
     return view('pages.tasks', [
       'tasks' => $tasks
     ]);
   } // End of public function tasks()  
 
-  public function task(Task $task) {
-    //$task = Task::findOrFail($id);
+  public function task(Task $task) {    
     return view('pages.task', compact('task'));
   } // End of public function task($id)
 

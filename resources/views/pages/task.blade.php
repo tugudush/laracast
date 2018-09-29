@@ -8,9 +8,9 @@
 @endsection
 
 @section('meta-dynamic')
-  <title>{{ isset($meta_title) ? $meta_title : 'Tasks | Laracast' }}</title>
-  <meta name="description" content="{{ isset($meta_description) ? $meta_description : 'Tasks' }}">
-  <meta name="keywords" content="{{ isset($meta_keywords) ? $meta_keywords : 'tasks' }}">
+  <title>{{ isset($meta_title) ? $meta_title : 'Task | Laracast' }}</title>
+  <meta name="description" content="{{ isset($meta_description) ? $meta_description : 'Task' }}">
+  <meta name="keywords" content="{{ isset($meta_keywords) ? $meta_keywords : 'task' }}">
 @endsection
 
 @section('content')
