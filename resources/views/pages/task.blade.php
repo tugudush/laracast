@@ -14,6 +14,7 @@
 @endsection
 
 @section('content')
+  {{ $task->created_at->toFormattedDateString() }}<br>
   {{ $task->body }}
 @endsection
 

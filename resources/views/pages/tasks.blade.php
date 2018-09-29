@@ -17,7 +17,12 @@
   <h2>Tasks List</h2>
   <ul>
     @foreach ($tasks as $task)
-      <li><a href="{{ URL::to('task/'.$task->id) }}">{{ $task->body }}</a></li>
+      <li>
+        <a href="{{ URL::to('task/'.$task->id) }}">
+          {{ $task->body }}<br>
+          {{ $task->created_at->toFormattedDateString() }}
+        </a>
+      </li>
     @endforeach
   </ul>
 @endsection
