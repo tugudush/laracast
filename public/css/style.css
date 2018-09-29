@@ -1,7 +1,38 @@
-main {
-  padding-top: 100px;
+#nav-header {
+  color: #fff;
+  background-color: #33393F;
 }
 
-.dropdown-menu {
-  left: initial;  
+#nav-header a {
+  color: #fff;
+}
+
+nav > ul {  
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav > ul > li > a.nav-link,
+.ddown-menu > li > a {
+  display: block;
+  padding: 1rem;
+  /* border: 1px solid #fff; */
+}
+
+nav > ul > li > ul {
+  display: none;
+  list-style-type: none;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 56px;
+  background-color: #33393F;
+}
+
+.ddown-menu > li {
+  text-align: center;
 }
