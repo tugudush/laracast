@@ -2,7 +2,7 @@
 
 @section('header-php')
   <?php
-  $body_id = 'page-index';
+  $body_id = 'page-tasks';
   $body_class = '';
   ?>
 @endsection

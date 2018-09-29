@@ -14,7 +14,7 @@
 @endsection
 
 @section('content')
-  Welcome
+  404, page not found!
 @endsection
 
 @section('page-footer-scripts')

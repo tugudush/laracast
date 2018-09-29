@@ -20,7 +20,7 @@ class PageController extends Controller
     return view('pages.tasks', [
       'tasks' => $tasks
     ]);
-  } // End of public function tasks()
+  } // End of public function tasks()  
 
   public function task(Task $task) {
     //$task = Task::findOrFail($id);
