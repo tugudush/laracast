@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use App\Task;
-use Faker\Factory;
 
 class CreateTasksTable extends Migration
 {
@@ -24,18 +23,9 @@ class CreateTasksTable extends Migration
     });
 
     //Artisan::call('db:seed');
-
-    $faker = Factory::create();
+    
     Task::truncate();
-
-    for ($i=1; $i<=5; $i++) {
-      
-      Task::create([
-        'body' => $faker->realText(30),
-        'completed' => false
-      ]);
-
-    } // End of for (i=1; i<=5; i++)
+    //Task::seed();    
         
   } // End of public function up()
 

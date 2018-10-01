@@ -27,6 +27,19 @@ class PostController extends Controller
 
   public function add() {
     return view('posts.add-post');
-  }
+  } // End of public function new()
+
+  public function submit() {
+    $request = request();
+    $request_data = $request->all();
+
+    $this->validate($request, [
+      'title' => 'required|unique:posts|max:255',
+      'body' => 'required',
+    ]);
+    
+    Post::create($request_data);
+    return redirect()->route('posts');
+  } // End of public function submit()
 
 } // End of class PostController extends Controller

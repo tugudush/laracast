@@ -1,7 +1,7 @@
 $(function() {
   viewport_info();
   fix_nav();
-  fix_list();  
+  fix_list();
 }); // End of $(function()
 
 $(window).resize(function() {  

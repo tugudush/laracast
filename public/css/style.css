@@ -1,3 +1,5 @@
+/*** Navigation ***/
+
 #nav-header {
   color: #fff;
   background-color: #33393F;
@@ -40,3 +42,31 @@ nav > ul > li:hover > ul {
 .ddown-menu > li > a {
   padding: 0.5rem 1rem;
 }
+
+/*** End of Navigation ***/
+
+/*** Add Form ***/
+
+.add-form {
+  max-width: 280px;
+}
+
+.add-form input[type="text"],
+.add-form textarea,
+.add-form button {
+  display: block;
+  margin-bottom: 1rem;
+  padding: 5px;  
+}
+
+.add-form input[type="text"],
+.add-form textarea {
+  width: 100%;  
+}
+
+/*** End of Add Form ***/
+
+/*** Errors ****/
+
+
+/*** End of Errors ***/

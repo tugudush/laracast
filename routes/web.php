@@ -11,12 +11,13 @@
 |
 */
 
-Route::get('/', 'PageController@index');
+Route::get('/', 'PageController@index')->name('index');
 
-Route::get('/tasks', 'TaskController@list');
+Route::get('/tasks', 'TaskController@list')->name('tasks');
 Route::get('/task/{task}', 'TaskController@view')->where(['task' => '[0-9]+']);
-Route::get('/task/add', 'TaskController@add');
+Route::get('/task/add', 'TaskController@add')->name('add-task');
 
-Route::get('/posts', 'PostController@list');
+Route::get('/posts', 'PostController@list')->name('posts');
 Route::get('/post/{post}', 'PostController@view')->where(['post' => '[0-9]+']);
-Route::get('/post/add', 'PostController@add');
+Route::get('/post/add', 'PostController@add')->name('add-post');
+Route::post('/post/submit', 'PostController@submit');
