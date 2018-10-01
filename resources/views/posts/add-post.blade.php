@@ -17,11 +17,17 @@
   <h2>Add Post</h2>
 
   <form id="add-post" class="add-form" action="{{ URL::to('post/submit') }}" method="POST">
+
     @include('snippets.errors')
+
     {{ csrf_field() }}
-    <input type="text" id="title" name="title" placeholder="Title">    
-    <textarea id="body" name="body" placeholder="body" rows="5"></textarea>
+
+    <input type="text" id="title" name="title" placeholder="Title" required>
+
+    <textarea id="body" name="body" placeholder="body" rows="5" required></textarea>
+
     <button type="submit" placeholder="body">Submit</button>
+    
   </form><!--/add-post-->
 @endsection
 

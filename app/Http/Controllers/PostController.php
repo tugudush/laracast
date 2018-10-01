@@ -9,7 +9,7 @@ class PostController extends Controller
 {
 
   public function list() {      
-    $posts = Post::all();
+    $posts = Post::latest()->get();
     return view('posts.posts', [
       'posts' => $posts
     ]);
