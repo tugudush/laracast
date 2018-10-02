@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/welcome', function() {
+  return view('welcome');
+});
+
 Route::get('/', 'PageController@index')->name('index');
 
 Route::get('/tasks', 'TaskController@list')->name('tasks');
